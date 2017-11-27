@@ -1,5 +1,5 @@
 {
-    "name": "Cobonto/Telegram",
+    "name": "cobonto/telegram",
     "type": "library",
     "description": "Laravel telegram",
     "keywords": [
