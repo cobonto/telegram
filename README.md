@@ -33,7 +33,7 @@ $ composer require cobonto/telegram
 ## Usage
 
 For laravel 5.5 this package support package discovery for older versions:
-add ServiceProvider to ``` php config/app.php ```
+add ServiceProvider to ```  config/app.php ```
 ``` php
 Cobonto\Telegram\TelegramServiceProvider::class
 ```
@@ -59,11 +59,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email msharif.ahrari@gmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [msharif ahrari][link-author]
+- [msharif ahrari][spyp]
 - [All Contributors][link-contributors]
 
 ## License
