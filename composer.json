@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cobonto\\Telegram\\": "tests"
+            "Cobonto\\Telegram\\Tests\\": "tests"
         }
     },
     "scripts": {
