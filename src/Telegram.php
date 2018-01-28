@@ -5,7 +5,6 @@ namespace Cobonto\Telegram;
 use Longman\TelegramBot\DB;
 use Longman\TelegramBot\Entities\Update;
 use Longman\TelegramBot\Request;
-
 class Telegram extends \Longman\TelegramBot\Telegram
 {
     /**
@@ -36,6 +35,18 @@ class Telegram extends \Longman\TelegramBot\Telegram
     public function sendMessage($data)
     {
         return Request::sendMessage($data);
+    }
+    public function answerInlineQuery($data)
+    {
+        return Request::answerInlineQuery($data);
+    }
+    public function answerCallBackQuery($data)
+    {
+        return Request::answerCallbackQuery($data);
+    }
+    public function sendDocument($data)
+    {
+        return Request::sendDocument($data);
     }
     public function __call($name, $arguments)
     {
@@ -167,7 +178,7 @@ class Telegram extends \Longman\TelegramBot\Telegram
     public function cacheLastCommand($chat_id,$command,array $data=[])
     {
         \Cache::forget('last_telegram_command_'.$chat_id);
-       return \Cache::remember('last_telegram_command_'.$chat_id,30,function() use($command,$data){
+       return \Cache::remember('last_telegram_command_'.$chat_id,30000,function() use($command,$data){
             return [
                 'command'=>$command,
                 'data'=>$data,
